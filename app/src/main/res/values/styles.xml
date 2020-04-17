@@ -1,0 +1,56 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="s_main_text" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@color/c_white</item>
+    </style>
+
+    <style name="s_login_text" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="s_login_edittext" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="s_welcome_text" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/c_dark_blue</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textSize">60sp</item>
+    </style>
+
+    <style name="s_available_text" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="card_subtitle" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

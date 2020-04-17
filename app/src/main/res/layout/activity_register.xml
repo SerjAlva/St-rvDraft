@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ll_register_pro"
+    tools:context=".activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_Register"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    style="@style/s_login_text"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:textAllCaps="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/tv_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Name"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Name"
+                    android:hint="@string/hint_Name"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="20"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"
+                    style="@style/s_login_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_LastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_LastName"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_LastName"
+                    android:hint="@string/hint_LastName"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:maxLength="25"
+                    style="@style/s_login_text"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Age"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etAge"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Age"
+                    android:hint="@string/hint_Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"
+                    style="@style/s_login_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Email"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Email"
+                    android:hint="@string/hint_Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"
+                    style="@style/s_login_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Avatar"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etAvatar"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Avatar"
+                    android:hint="@string/hint_Avatar"
+                    android:inputType="textUri"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"
+                    style="@style/s_login_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Password"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Password"
+                    android:hint="@string/hint_Password"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"
+                    style="@style/s_login_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Password_Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_PasswordConfirm"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <EditText
+                    android:id="@+id/etPasswordConfirm"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Password_Confirm"
+                    android:hint="@string/hint_PasswordConfirm"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:background="@drawable/tv_login"
+                    style="@style/s_login_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_Gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Gender"
+                    android:layout_marginLeft="3dp"
+                    style="@style/s_login_text" />
+
+                <Spinner
+                    android:id="@+id/spGender"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Gender"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp">
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/btn_save"
+                    style="@style/s_main_text"
+                    android:background="@drawable/btn_login"
+                    android:backgroundTint="@color/c_mid_blue"
+                    android:textColor="@color/c_white"
+                    android:textAllCaps="false"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

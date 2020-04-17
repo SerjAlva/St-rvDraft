@@ -1,0 +1,109 @@
+<resources>
+
+    <string name="app_name">Stärv</string>
+
+    <!-- MainActivity -->
+    <string name="text_Welcome">Stärv</string>
+    <string name="text_Register">Don´t have an account?</string>
+    <string name="hint_UserID">Username</string>
+    <string name="hint_UserPassword">Password</string>
+    <string name="btn_LogIn">Log In</string>
+    <string name="btn_SignUp">Sign Up</string>
+    <string name="text_remember_user">Remember me</string>
+
+    <!-- CreateRecipeActivity -->
+    <string-array name="array_Units">
+        <item>pizca</item>
+        <item>cucharada</item>
+        <item>piezas</item>
+        <item>miligramos</item>
+        <item>gramos</item>
+        <item>kilos</item>
+        <item>mililitros</item>
+        <item>litros</item>
+    </string-array>
+    <string-array name="array_Time">
+        <item>minutos</item>
+        <item>horas</item>
+    </string-array>
+    <string-array name="array_Category">
+        <item>Desayuno</item>
+        <item>Comida</item>
+        <item>Cena</item>
+        <item>Fit</item>
+        <item>Pastas</item>
+        <item>Colación</item>
+        <item>Ensalada</item>
+        <item>Carnes</item>
+    </string-array>
+
+
+    <!-- WatchRecipeActivity -->
+    <string name="tv_IngredientList">"- 2 tazas de galleta de canela \n\n - 1/2 taza de mantequilla fundida \n\n - 2 1/3 paquetes de queso crema a temperatura ambiente \n\n - 1 1/2 tazas de crema para batir 300 ml \n\n - 1/2 taza de azúcar \n\n - 5 huevos \n\n - 1 cucharadita de vainilla líquida \n\n - 5 cucharadas de harina \n\n - 1/4 de taza de mermelada de fresa \n\n - 2 tazas de fresa enteras y sin rabo "</string>
+    <string name="tv_PrepStepList">"- aLicúa las galletas de canela y la mantequilla hasta tener una masita \n\n - Añade a tu molde la mezcla de galleta y presiona hasta formar una base, refrigera. \n\n - En una batidora  bate el queso crema, agrega la crema para batir, el azúcar, los huevos uno a uno, la vainilla, y la harina hasta incorporar perfectamente. \n\n - Vierte el batido en tu molde y cierra o cubre con papel aluminio. \n\n - Colócalo en una olla de presión con líquido y sobre una rejilla, cierra y cocina a partir de que suene la válvula durante 20 minutos. Enfría antes de destapar. \n\n - Retira el cheesecake de la olla de presi\u00f3n y refrigera alrededor de dos horas. \n\n - Desmolda y decora con mermelada y fresas."</string>
+    <string name="tv_NutriInfo">"Tamaño de la Porción: 1 trozo (1/12 de 23 cm de diámetro) \n\n Por porción: \n\n - Energía 410 kcal \n - Proteína 1g \n - Carbohidratos 27g \n - Fibra 0,4g \n - Azúcar 8,2g \n - Grasa 24,58g \n - Grasa Saturada 9,83g \n - Grasa Poliinsaturada 4,166g \n - Grasa Monoinsaturada 9,207g \n - Colestero l86mg \n - Sodio 484mg \n - Potasio 116mg"</string>
+    <string-array name="array_portions">
+        <item>2 porciones</item>
+        <item>4 porciones</item>
+        <item>6 porciones</item>
+        <item>8 porciones</item>
+        <item>10 porciones</item>
+    </string-array>
+
+
+    <!-- RegisterActivity -->
+    <string name="label_NoDriver">No drivers available</string>
+    <string name="title_Register">Register</string>
+    <string name="label_Name">Complete Name</string>
+    <string name="hint_Name">Enter your name</string>
+    <string name="label_LastName">Last Name</string>
+    <string name="hint_LastName">Enter your last name</string>
+    <string name="label_Age">Age</string>
+    <string name="hint_Age">Enter your age</string>
+    <string name="label_Email">Email Address</string>
+    <string name="hint_Email">Enter your email</string>
+    <string name="label_Avatar">Avatar URL</string>
+    <string name="hint_Avatar">Enter your avatar</string>
+    <string name="label_Password">Password</string>
+    <string name="hint_Password">Enter your password</string>
+    <string name="label_PasswordConfirm">Confirm Password</string>
+    <string name="hint_PasswordConfirm">Confirm your password</string>
+    <string name="label_Gender">Gender</string>
+    <string-array name="array_Gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>undefined</item>
+    </string-array>
+    <string name="btn_save">Sign up!</string>
+    <string name="label_user_registered">User registered</string>
+
+    <!-- MainMenu -->
+    <string name="menu_LogOut">Log Out</string>
+
+    <!-- AlertDialog -->
+    <string name="alert_logout">Are you sure you want to log out?</string>
+    <string name="alert_positive">Accept</string>
+    <string name="alert_negative">Cancel</string>
+
+    <!-- Error -->
+    <string name="error_data_required">Data required</string>
+    <string name="error_db">Could not edit driver</string>
+    <string name="error_password">Passwords don´t match</string>
+    <string name="error_user_password">Incorrect username and/or password</string>
+
+    <!-- MarketListActivity & DishListActivity -->
+    <string name="onRemove1">¿Realmente deseas eliminar </string>
+    <string name="dialog_title">Eliminar Platillo</string>
+    <string name="ok">Sí</string>
+    <string name="cancel">No</string>
+    <string name="porcionesTest">4</string>
+    <string name="categoriaTest">Frutas y Verduras</string>
+    <string name="progress_test">4/5</string>
+    <string name="onSuccessToast">Información guardada correctamente</string>
+    <string name="onErrorToast">Lo sentimos, algo salió mal</string>
+    <string name="elemListTest">1.5 kg de Zanahoria</string>
+    <string name="retirar_porcion_error">no se pueden retirar porciones</string>
+    <string name="imprimiendoLista">imprimiendo lista</string>
+    <string name="generarLista">generar lista</string>
+
+</resources>

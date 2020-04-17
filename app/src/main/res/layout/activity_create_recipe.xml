@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateRecipeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_RecipeName"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/tv_login"
+                    android:gravity="center"
+                    android:hint="Nombre de receta"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_RecipeAvatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:padding="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foodpic_icon" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredientes"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/c_light_gray"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_IName"
+                        android:layout_width="72dp"
+                        android:layout_height="38dp"
+                        android:hint="Ingrediente"
+                        android:background="@drawable/tv_login"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:padding="2dp"
+                        android:layout_marginEnd="5dp"/>
+
+                    <EditText
+                        android:id="@+id/et_IQuantity"
+                        android:layout_width="72dp"
+                        android:layout_height="38dp"
+                        android:hint="Cantidad"
+                        android:background="@drawable/tv_login"
+                        android:textSize="10sp"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:padding="2dp"
+                        android:layout_marginEnd="5dp"/>
+
+                    <Spinner
+                        android:id="@+id/sp_IUnits"
+                        android:layout_width="72dp"
+                        android:layout_height="38dp"
+                        android:textSize="10sp"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/tv_login"/>
+
+                    <EditText
+                        android:id="@+id/et_IComment"
+                        android:layout_width="72dp"
+                        android:layout_height="38dp"
+                        android:hint="Comentarios"
+                        android:background="@drawable/tv_login"
+                        android:textSize="10sp"
+                        android:textAlignment="center"
+                        android:layout_marginStart="5dp"
+                        android:padding="2dp"/>
+
+                    <Button
+                        android:id="@+id/btn_NewIngredient"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/plus_icon" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preparación"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPrepSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/c_light_gray"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_PrepStep"
+                        android:layout_width="290dp"
+                        android:layout_height="40dp"
+                        android:hint="Ejemplo: Saltear la cebolla previamente"
+                        android:background="@drawable/tv_login"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:padding="2dp"
+                        android:layout_marginEnd="5dp"/>
+
+                    <Button
+                        android:id="@+id/btn_NewPrepStep"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/plus_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:text="¿Cuantas porciones se obtienen?"/>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/et_Portion"
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:hint="No. Porciones"
+                        android:background="@drawable/tv_login"
+                        android:inputType="number"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:padding="2dp"
+                        android:layout_marginEnd="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="porciones"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:text="¿Cuánto tiempo es de preparación?"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/et_TimeP"
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:hint="Cantidad"
+                        android:background="@drawable/tv_login"
+                        android:inputType="time"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:padding="2dp"
+                        android:layout_marginEnd="5dp"/>
+
+                    <Spinner
+                        android:id="@+id/sp_TimeP"
+                        android:layout_width="90dp"
+                        android:layout_height="38dp"
+                        android:textSize="10sp"
+                        android:layout_marginTop="1dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/tv_login"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:text="¿Cuánto tiempo es de cocción?"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/et_TimeC"
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:hint="Cantidad"
+                        android:background="@drawable/tv_login"
+                        android:inputType="time"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:padding="2dp"
+                        android:layout_marginEnd="5dp"/>
+
+                    <Spinner
+                        android:id="@+id/sp_TimeC"
+                        android:layout_width="90dp"
+                        android:layout_height="38dp"
+                        android:textSize="10sp"
+                        android:layout_marginTop="1dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/tv_login"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:text="Selecciona alguna categoría"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <ToggleButton
+                        android:id="@+id/btn_Breakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Desayuno"
+                        android:textOff="Desayuno"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/btn_Lunch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Comida"
+                        android:textOff="Comida"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/btn_Dinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Cena"
+                        android:textOff="Cena"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <ToggleButton
+                        android:id="@+id/btn_Snack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Colaciones"
+                        android:textOff="Colaciones"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/btn_Salad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Ensaladas"
+                        android:textOff="Ensaladas"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/btn_Pasta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Pastas"
+                        android:textOff="Pastas"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <ToggleButton
+                        android:id="@+id/btn_Soup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Sopas"
+                        android:textOff="Sopas"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/btn_Meat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Carnes"
+                        android:textOff="Carnes"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/btn_Healthy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:textOn="Saludable"
+                        android:textOff="Saludable"
+                        android:background="@drawable/btn_category"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/btn_RecipeDraft"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="210dp"
+                    android:background="@drawable/draft_icon" />
+
+                <Button
+                    android:id="@+id/btn_RecipeComplete"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/done_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ivAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true" />
+
+</RelativeLayout>

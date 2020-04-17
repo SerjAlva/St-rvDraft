@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="d_new_margin">10dp</dimen>
+    <dimen name="d_selection_stroke">3dp</dimen>
+    <dimen name="d_et_add_contact">250dp</dimen>
+</resources>

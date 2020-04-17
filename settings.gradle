@@ -1,0 +1,2 @@
+rootProject.name='StarvDraft_v1'
+include ':app'

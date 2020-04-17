@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ll_register_pro"
+    tools:context=".activities.PassActivity">
+
+    <Button
+        android:id="@+id/btn_Search"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Search"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_Create"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:text="Create Recipe"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_Home"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:text="Home"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
