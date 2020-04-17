@@ -47,7 +47,6 @@ public class    ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder>
                     items.get(position).setStatus(false);
                     holder.itemUnready();
                 }
-                //notifyItemChanged(position);
             }
         });
     }

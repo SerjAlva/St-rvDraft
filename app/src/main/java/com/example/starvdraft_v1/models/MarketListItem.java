@@ -55,6 +55,9 @@ public class MarketListItem {
 
     @Override
     public String toString(){
-        return cantidad + " " + unidad + " de " + nombreIngrediente;
+        if(!unidad.equals("pieza") && !unidad.equals("piezas"))
+            return cantidad + " " + unidad + " de " + nombreIngrediente;
+        else
+            return cantidad + "  " + nombreIngrediente;
     }
 }

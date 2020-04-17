@@ -57,6 +57,7 @@ public class DishItemAdapter extends RecyclerView.Adapter<DishItemViewHolder> {
                 }else{
                     items.get(position).porciones = String.valueOf(porciones-1);
                     items.get(position).precioMostrador = items.get(position).precio*porciones;
+                    holder.tvPrecio.setText(String.valueOf(items.get(position).precioMostrador));
                     notifyItemChanged(position);
                 }
             }
@@ -68,6 +69,7 @@ public class DishItemAdapter extends RecyclerView.Adapter<DishItemViewHolder> {
                 int porciones = Integer.parseInt(items.get(position).porciones);
                 items.get(position).porciones = String.valueOf(porciones + 1);
                 items.get(position).precioMostrador = items.get(position).precio*porciones;
+                holder.tvPrecio.setText(String.valueOf(items.get(position).precioMostrador));
                 notifyItemChanged(position);
             }
         });

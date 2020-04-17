@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DishItemViewHolder extends RecyclerView.ViewHolder {
 
-    TextView tvCantidadPorciones, tvPrecio, tvTitulo;
+    public TextView tvCantidadPorciones, tvPrecio, tvTitulo;
     public ImageView ibRemove, ivMenos, ivMas, ivPeople, ivImagen, ivRecordatorio;
 
     public DishItemViewHolder(View itemView) {
@@ -31,7 +31,11 @@ public class DishItemViewHolder extends RecyclerView.ViewHolder {
     public void updateUI(DishItem dishItem) {
 
         tvTitulo.setText(dishItem.getTitulo());
-        tvPrecio.setText(String.valueOf(dishItem.getPrecio()));
+        if(dishItem.precioMostrador==0){
+            tvPrecio.setText(String.valueOf(dishItem.getPrecio()));
+        }else {
+            tvPrecio.setText(String.valueOf(dishItem.getPrecioMostrador()));
+        }
         tvCantidadPorciones.setText(dishItem.getPorciones());
 
         switch (dishItem.getTitulo()) {
