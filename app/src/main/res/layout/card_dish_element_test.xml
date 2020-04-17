@@ -17,7 +17,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/ibRemove"
+            android:id="@+id/ibRemoves"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_close"

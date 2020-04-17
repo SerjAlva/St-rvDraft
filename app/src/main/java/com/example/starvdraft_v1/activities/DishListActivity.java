@@ -66,10 +66,11 @@ public class DishListActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         dishItemAdapter = new DishItemAdapter(lista);
-        recyclerView.setAdapter(dishItemAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(dishItemAdapter);
 
-        dishItemAdapter.setOnItemClickListener(new DishItemViewHolder.OnItemClickListener() {
+
+        /*dishItemAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onAddPortionClick(int position) {
                 int porciones = Integer.parseInt(lista.get(position).porciones);
@@ -113,12 +114,13 @@ public class DishListActivity extends AppCompatActivity {
                     Toast.makeText(DishListActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
 
         btnComprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Obtenemos lista de ingredientes
+                formattedIngredients = "";
                 for(DishItem dishItem : lista){
                     formattedIngredients = formattedIngredients + dishItem.getIngredientes();
                 }
@@ -166,6 +168,16 @@ public class DishListActivity extends AppCompatActivity {
     private void showAllDishes(){
         dishItemAdapter = new DishItemAdapter(lista);
         recyclerView.setAdapter(dishItemAdapter);
+    }
+
+    //Esta clase sirve para controlar los botones de cada card
+    public interface OnItemClickListener{
+        //Método que se manda a llamar cuando se toca en añadir porción
+        void onAddPortionClick(int position);
+        //Método que se manda a llamar cuando se toca en quitar porción
+        void onRetirePortionClick(int position);
+        //Método que se llama cuando se toca el botón eliminar platillo
+        void onRemoveClick(int position);
     }
 
 }

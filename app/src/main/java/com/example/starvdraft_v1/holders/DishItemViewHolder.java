@@ -20,7 +20,7 @@ public class DishItemViewHolder extends RecyclerView.ViewHolder {
         tvCantidadPorciones = (TextView) itemView.findViewById(R.id.tvCantidadPorciones);
         tvPrecio = (TextView) itemView.findViewById(R.id.tvPrecio);
         tvTitulo = (TextView) itemView.findViewById(R.id.tvTitulo);
-        ibRemove = (ImageView) itemView.findViewById(R.id.ibRemove);
+        ibRemove = (ImageView) itemView.findViewById(R.id.ibRemoves);
         ivMenos = (ImageView) itemView.findViewById(R.id.ivMenos);
         ivMas = (ImageView) itemView.findViewById(R.id.ivMas);
         ivPeople = (ImageView) itemView.findViewById(R.id.ivPeople);
@@ -81,13 +81,5 @@ public class DishItemViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    //Esta clase sirve para controlar los botones de cada card
-    public interface OnItemClickListener{
-        //Método que se manda a llamar cuando se toca en añadir porción
-        void onAddPortionClick(int position);
-        //Método que se manda a llamar cuando se toca en quitar porción
-        void onRetirePortionClick(int position);
-        //Método que se llama cuando se toca el botón eliminar platillo
-        void onRemoveClick(int position);
-    }
+
 }

@@ -87,7 +87,7 @@ public class MarketListActivity extends AppCompatActivity {
                         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(nuevaLista));
                         for(FoodCategory category : categorias){
                             for(MarketListItem item : category.getElementos()){
-                                bufferedWriter.write(item.toString());
+                                bufferedWriter.write(item.toString() + "\n");
                             }
                         }
                         bufferedWriter.close();

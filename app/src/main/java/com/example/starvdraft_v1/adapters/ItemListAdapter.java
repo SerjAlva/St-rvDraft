@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import com.example.starvdraft_v1.R;
 import com.example.starvdraft_v1.holders.ItemListViewHolder;
@@ -53,6 +54,7 @@ public class    ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder>
                 items.get(position).setStatus(!items.get(position).isReady());
                 holder.chBxEstado.setChecked(items.get(position).isReady());
                 notifyItemChanged(position);
+
             }
         });
     }

@@ -11,7 +11,7 @@ import com.example.starvdraft_v1.network.requests.RegisterUser;
 
 public class ApiUtils {
 
-    public static final String STARV_BASE_URL = "http://192.168.0.1/ServidorDL/Starv_Services/";
+    public static final String STARV_BASE_URL = "http://192.168.0.14/ServidorDL/Starv_Services/";
 
     public static GetUser getUser() {
 
