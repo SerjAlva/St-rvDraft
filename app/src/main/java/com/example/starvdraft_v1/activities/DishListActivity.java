@@ -20,6 +20,7 @@ import com.example.starvdraft_v1.preferences.AppPreferences;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -68,6 +69,27 @@ public class DishListActivity extends AppCompatActivity {
         dishItemAdapter = new DishItemAdapter(lista);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(dishItemAdapter);
+
+        //Este listener nos ayuda a controlar cuando vemos o no el botón de compra
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                //Si el desplazamiento es hacia abajo:
+                if (dy > 0) {
+                    btnComprar.setVisibility(View.INVISIBLE);
+                }
+                //Si el desplazamiento es hacia arriba:
+                else {
+                    btnComprar.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
 
         /*dishItemAdapter.setOnItemClickListener(new OnItemClickListener() {
@@ -132,6 +154,8 @@ public class DishListActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
     public void getDishList(String recetas) {

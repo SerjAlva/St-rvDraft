@@ -37,24 +37,22 @@ public class    ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder>
     @Override
     public void onBindViewHolder(@NonNull final ItemListViewHolder holder, final int position) {
         holder.tvContenido.setText(items.get(position).toString());
-        if(items.get(position).isReady()){
-            holder.itemReady();
-        }
-        holder.chBxEstado.setChecked(items.get(position).isReady());
-
-        if(items.get(position).isReady()){
-            holder.itemReady();
-        }else{
-            holder.itemUnready();
-        }
-
         holder.chBxEstado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 items.get(position).setStatus(!items.get(position).isReady());
+                holder.chBxEstado.setChecked(isChecked);
+                if(items.get(position).isReady()){
+                    holder.itemReady();
+                }
                 holder.chBxEstado.setChecked(items.get(position).isReady());
-                notifyItemChanged(position);
 
+                if(items.get(position).isReady()){
+                    holder.itemReady();
+                }else{
+                    holder.itemUnready();
+                }
+                notifyItemChanged(position);
             }
         });
     }
