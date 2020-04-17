@@ -187,7 +187,10 @@ public class MarketListActivity extends AppCompatActivity {
             }
         }
         lista.add(new FoodCategory("Lista de compras", R.color.desp, informacionObtenida));
+        lista.add(new FoodCategory("Básicos del Chef", R.color.basicos, generarItemsBasicos()));
         return  lista;
     }
+
+
 
 }
