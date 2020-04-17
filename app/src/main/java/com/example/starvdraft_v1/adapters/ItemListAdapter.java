@@ -42,8 +42,10 @@ public class    ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder>
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     items.get(position).setStatus(true);
+                    holder.itemReady();
                 }else{
                     items.get(position).setStatus(false);
+                    holder.itemUnready();
                 }
                 //notifyItemChanged(position);
             }
